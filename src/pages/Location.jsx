@@ -61,7 +61,7 @@ export default function Location() {
                         className="w-full h-[400px] rounded-2xl overflow-hidden shadow-lg border-8 border-white"
                     >
                         <iframe
-                            src={config.event.venue.maps_url}
+                            src={config.event.venue.maps_embed}
                             width="100%"
                             height="100%"
                             style={{ border: 0 }}
@@ -104,19 +104,7 @@ export default function Location() {
                                 </div>
 
                                 {/* Action Buttons */}
-                                <div className="grid grid-cols-2 gap-2 pt-4">
-                                    <motion.a
-                                        href={config.event.venue.maps_embed}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        whileHover={{ scale: 1.02 }}
-                                        whileTap={{ scale: 0.98 }}
-                                        className="flex items-center justify-center gap-1.5 bg-rose-500 text-white px-4 py-2 rounded-lg hover:bg-rose-600 transition-colors text-sm"
-                                    >
-                                        <NavigationIcon className="w-3.5 h-3.5" />
-                                        <span>Directions</span>
-                                    </motion.a>
-
+                                <div className="grid grid-cols-1 gap-2 pt-4">
                                     <motion.a
                                         href={config.event.venue.maps_url}
                                         target="_blank"

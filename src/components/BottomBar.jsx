@@ -14,7 +14,6 @@ const menuItems = [
   { icon: Home, label: 'Home', href: '#home' },
   { icon: CalendarHeart, label: 'Event', href: '#event' },
   { icon: MapPin, label: 'Location', href: '#location' },
-  { icon: Gift, label: 'Gifts', href: '#gifts' },
   { icon: MessageCircleHeart, label: 'Wishes', href: '#wishes' },
 ];
 
