@@ -5,7 +5,7 @@ const config = {
   meta: {
     title: "Triyono & Dewi",
     description: "We are getting married and would love for you to be a part of our celebration.",
-    ogImage: "/images/og-image.jpg", // OpenGraph image for social media
+    ogImage: "/images/og-image.ppg", // OpenGraph image for social media
     favicon: "/images/favicon.ico",
   },
 
