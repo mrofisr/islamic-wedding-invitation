@@ -30,7 +30,7 @@ const config = {
       name: "Kuwarasan",
       address: "Kuwarasan",
       date: "Jumat, 14 Februari, 2025",
-      time: "16:16 - 17:30 WIB",
+      time: "10:00 - 15:00 WIB",
       phone: "+62 123 4567 890",
       maps_url: "https://maps.app.goo.gl/4GNbf92fWh4du4xf8",
       maps_embed: "https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d247.35812475247437!2d110.3598944208979!3d-7.271534836554572!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sid!2sid!4v1735392938031!5m2!1sid!2sid",
@@ -49,9 +49,9 @@ const config = {
     description: "We invite you to join us in celebrating our wedding ceremony."
   }, {
     title: "Resepsi Nikah - Triyono & Dewi Wedding",
-    date: "2024-1-14",
-    startTime: "16:16",
-    endTime: "17:30",
+    date: "2025-1-14",
+    startTime: "12:00",
+    endTime: "15:00",
     timeZone: "Asia/Jakarta",
     location: "Kuwarasan",
     description: "We invite you to join us in celebrating our wedding ceremony."
