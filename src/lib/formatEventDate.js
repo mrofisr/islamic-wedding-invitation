@@ -25,29 +25,29 @@ export const formatEventDate = (isoString, format = 'full') => {
 
     // Indonesian month names mapping
     const monthsIndonesian = {
-        'January': 'Januari',
-        'February': 'Februari',
-        'March': 'Maret',
+        'January': 'January',
+        'February': 'February',
+        'March': 'March',
         'April': 'April',
-        'May': 'Mei',
-        'June': 'Juni',
-        'July': 'Juli',
-        'August': 'Agustus',
+        'May': 'May',
+        'June': 'June',
+        'July': 'July',
+        'August': 'August',
         'September': 'September',
-        'October': 'Oktober',
+        'October': 'October',
         'November': 'November',
-        'December': 'Desember'
+        'December': 'December'
     };
 
     // Indonesian day names mapping
     const daysIndonesian = {
-        'Sunday': 'Minggu',
-        'Monday': 'Senin',
-        'Tuesday': 'Selasa',
-        'Wednesday': 'Rabu',
-        'Thursday': 'Kamis',
-        'Friday': 'Jumat',
-        'Saturday': 'Sabtu'
+        'Sunday': 'Sunday',
+        'Monday': 'Monday',
+        'Tuesday': 'Tuesday',
+        'Wednesday': 'Wednesday',
+        'Thursday': 'Thursday',
+        'Friday': 'Friday',
+        'Saturday': 'Saturday'
     };
 
     let formatted = date.toLocaleDateString('en-US', formats[format]);

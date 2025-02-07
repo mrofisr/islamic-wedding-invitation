@@ -34,21 +34,21 @@ export default function Wishes() {
             id: 1,
             name: "John Doe",
             message: "Wishing you both a lifetime of love, laughter, and happiness! 🎉",
-            timestamp: "2024-12-24T23:20:00Z",
+            timestamp: "2025-02-23T23:20:00Z",
             attending: "attending"
         },
         {
             id: 2,
             name: "Natalie",
             message: "Wishing you both a lifetime of love, laughter, and happiness! 🎉",
-            timestamp: "2024-12-24T23:20:00Z",
+            timestamp: "2025-02-23T23:20:00Z",
             attending: "attending"
         },
         {
             id: 3,
             name: "mrofisr",
             message: "Congratulations on your special day! May Allah bless your union! 🤲",
-            timestamp: "2024-12-25T23:08:09Z",
+            timestamp: "2025-02-23T23:08:09Z",
             attending: "maybe"
         }
 

@@ -31,10 +31,10 @@ export default function Hero() {
 
             if (difference > 0) {
                 timeLeft = {
-                    hari: Math.floor(difference / (1000 * 60 * 60 * 24)),
-                    jam: Math.floor((difference / (1000 * 60 * 60)) % 24),
-                    menit: Math.floor((difference / 1000 / 60) % 60),
-                    detik: Math.floor((difference / 1000) % 60),
+                    days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+                    hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+                    minutes: Math.floor((difference / 1000 / 60) % 60),
+                    seconds: Math.floor((difference / 1000) % 60),
                 };
             }
 
@@ -64,53 +64,10 @@ export default function Hero() {
             </div>
         );
     };
-    const FloatingHearts = () => {
-        return (
-            <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                {[...Array(8)].map((_, i) => (
-                    <motion.div
-                        key={i}
-                        initial={{
-                            opacity: 0,
-                            scale: 0,
-                            x: Math.random() * window.innerWidth,
-                            y: window.innerHeight
-                        }}
-                        animate={{
-                            opacity: [0, 1, 1, 0],
-                            scale: [0, 1, 1, 0.5],
-                            x: Math.random() * window.innerWidth,
-                            y: -100
-                        }}
-                        transition={{
-                            duration: 4,
-                            repeat: Infinity,
-                            delay: i * 0.8,
-                            ease: "easeOut"
-                        }}
-                        className="absolute"
-                    >
-                        <Heart
-                            className={`w-${Math.random() * 3 + 3} h-${Math.random() * 3 + 3} ${i % 3 === 0 ? 'text-rose-400' :
-                                i % 3 === 1 ? 'text-pink-400' :
-                                    'text-red-400'
-                                }`}
-                            fill="currentColor"
-                        />
-                    </motion.div>
-                ))}
-            </div>
-        );
-    };
     return (
         <>
             <section id="home" className="relative flex flex-col items-center justify-center min-h-screen px-4 py-20 overflow-hidden text-center " style={{ background: 'linear-gradient(to bottom, #FCE3CF, #D2E8F3)' }}>
                 {/* Decorative Background */}
-                <div className="absolute inset-0 overflow-hidden">
-                    <div className="absolute top-0 left-0 w-32 h-32 transform -translate-x-1/2 -translate-y-1/2 rounded-full bg-rose-100/50 blur-3xl" />
-                    <div className="absolute bottom-0 right-0 w-32 h-32 transform translate-x-1/2 translate-y-1/2 rounded-full bg-pink-100/50 blur-3xl" />
-                </div>
-
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -125,7 +82,7 @@ export default function Hero() {
                         className="inline-block mx-auto"
                     >
                         <span className="px-4 py-1 text-sm border rounded-full bg-rose-50 text-rose-600 border-rose-200">
-                            Catat Tanggal Penting Ini
+                            Save This Important Date
                         </span>
                     </motion.div>
 
@@ -137,7 +94,7 @@ export default function Hero() {
                             transition={{ delay: 0.4 }}
                             className="italic font-light text-gray-500"
                         >
-                            InsyaAllah Kami Akan Menikah
+                            God Willing, We Will Get Married
                         </motion.p>
                         <motion.h2
                             initial={{ scale: 0.8, opacity: 0 }}
@@ -156,15 +113,7 @@ export default function Hero() {
                         transition={{ delay: 0.8 }}
                         className="relative max-w-md mx-auto"
                     >
-                        {/* Decorative Elements */}
-                        <div className="absolute inset-0 bg-gradient-to-b from-rose-50/50 to-white/50 backdrop-blur-md rounded-2xl" />
-
                         <div className="relative px-8 py-10 border rounded-2xl border-rose-100/50">
-                            {/* Top Decorative Line */}
-                            <div className="absolute top-0 -translate-x-1/2 -translate-y-px left-1/2">
-                                <div className="w-32 h-[2px] bg-gradient-to-r from-transparent via-rose-200 to-transparent" />
-                            </div>
-
                             {/* Content */}
                             <div className="space-y-6 text-center">
                                 {/* Date and Time */}
@@ -177,30 +126,10 @@ export default function Hero() {
                                     >
                                         <Calendar className="w-4 h-4 text-rose-400" />
                                         <span className="font-medium text-gray-700">
-                                            {formatEventDate(config.event.dateTime, "full")}
-                                        </span>
-                                    </motion.div>
-
-                                    <motion.div
-                                        initial={{ opacity: 0 }}
-                                        animate={{ opacity: 1 }}
-                                        transition={{ delay: 1 }}
-                                        className="flex items-center justify-center space-x-2"
-                                    >
-                                        <Clock className="w-4 h-4 text-rose-400" />
-                                        <span className="font-medium text-gray-700">
-                                            {config.event.time}
+                                            {formatEventDate(config.event.dateTime, "date")}
                                         </span>
                                     </motion.div>
                                 </div>
-
-                                {/* Divider */}
-                                <div className="flex items-center justify-center gap-3">
-                                    <div className="w-12 h-px bg-rose-200/50" />
-                                    <div className="w-2 h-2 rounded-full bg-rose-200" />
-                                    <div className="w-12 h-px bg-rose-200/50" />
-                                </div>
-
                                 {/* Invitation Text */}
                                 <motion.div
                                     initial={{ opacity: 0 }}
@@ -209,48 +138,14 @@ export default function Hero() {
                                     className="space-y-2"
                                 >
                                     <p className="font-serif italic text-gray-500">
-                                        Kepada Yth.
-                                    </p>
-                                    <p className="font-medium text-gray-600">
-                                        Bapak/Ibu/Saudara/i
-                                    </p>
-                                    <p className="text-lg font-semibold text-rose-500">
-                                        {guestName ? guestName : "Tamu"}
+                                       we cordially invite you &  your  family to join us
                                     </p>
                                 </motion.div>
                             </div>
-
-                            {/* Bottom Decorative Line */}
-                            <div className="absolute bottom-0 -translate-x-1/2 translate-y-px left-1/2">
-                                <div className="w-32 h-[2px] bg-gradient-to-r from-transparent via-rose-200 to-transparent" />
-                            </div>
                         </div>
-
-                        {/* Background Blur Circles */}
-                        <div className="absolute w-24 h-24 rounded-full -top-4 -right-4 bg-rose-100/20 blur-xl" />
-                        <div className="absolute w-24 h-24 rounded-full -bottom-4 -left-4 bg-rose-100/20 blur-xl" />
                     </motion.div>
-
                     {/* Countdown Timer */}
                     <CountdownTimer targetDate={config.event.dateTime} />
-
-                    {/* Decorative Elements */}
-                    <div className="relative pt-6">
-                        <FloatingHearts />
-                        <motion.div
-                            animate={{
-                                scale: [1, 1.1, 1],
-                                rotate: [0, 5, -5, 0]
-                            }}
-                            transition={{
-                                duration: 2,
-                                repeat: Infinity,
-                                ease: "easeInOut"
-                            }}
-                        >
-                            <Heart className="w-12 h-12 mx-auto text-rose-500" fill="currentColor" />
-                        </motion.div>
-                    </div>
                 </motion.div>
             </section>
         </>
