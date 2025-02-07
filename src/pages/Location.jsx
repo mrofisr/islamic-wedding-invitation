@@ -6,26 +6,26 @@ import { formatEventDate } from "@/lib/formatEventDate";
 export default function Location() {
     return (<>
         {/* Location section */}
-        <section id="location" className="min-h-screen relative overflow-hidden bg-gradient-to-b from-white via-rose-50/30 to-white">
+        <section id="location" className="relative min-h-screen overflow-hidden" style={{ background: 'linear-gradient(to bottom, #FCE3CF, #D2E8F3)' }}>
             {/* Decorative Elements */}
             <div className="absolute inset-0">
-                <div className="absolute top-0 right-0 w-64 h-64 bg-rose-100/20 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2" />
-                <div className="absolute bottom-0 left-0 w-64 h-64 bg-pink-100/20 rounded-full blur-3xl -translate-x-1/2 translate-y-1/2" />
+                <div className="absolute top-0 right-0 w-64 h-64 translate-x-1/2 -translate-y-1/2 rounded-full bg-rose-100/20 blur-3xl" />
+                <div className="absolute bottom-0 left-0 w-64 h-64 -translate-x-1/2 translate-y-1/2 rounded-full bg-pink-100/20 blur-3xl" />
             </div>
 
-            <div className="container mx-auto px-4 py-20 relative z-10">
+            <div className="container relative z-10 px-4 py-20 mx-auto">
                 {/* Section Header */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
-                    className="text-center space-y-4 mb-16"
+                    className="mb-16 space-y-4 text-center"
                 >
                     <motion.span
                         initial={{ opacity: 0, y: 10 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.2 }}
-                        className="inline-block text-rose-500 font-medium"
+                        className="inline-block font-medium text-rose-500"
                     >
                         Lokasi Acara
                     </motion.span>
@@ -34,7 +34,7 @@ export default function Location() {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.3 }}
-                        className="text-4xl md:text-5xl font-serif text-gray-800"
+                        className="font-serif text-4xl text-gray-800 md:text-5xl"
                     >
                         Lokasi
                     </motion.h2>
@@ -53,7 +53,7 @@ export default function Location() {
                 </motion.div>
 
                 {/* Location Content */}
-                <div className="max-w-6xl mx-auto grid md:grid-row-2 gap-8 items-center">
+                <div className="grid items-center max-w-6xl gap-8 mx-auto md:grid-row-2">
                     {/* Map Container */}
                     <motion.div
                         initial={{ opacity: 0, x: -50 }}
@@ -80,13 +80,13 @@ export default function Location() {
                         transition={{ duration: 0.8 }}
                         className="space-y-6"
                     >
-                        <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
-                            <h3 className="text-2xl font-serif text-gray-800 mb-6">{config.event.name}</h3>
+                        <div className="p-8 bg-white border border-gray-100 shadow-lg rounded-2xl">
+                            <h3 className="mb-6 font-serif text-2xl text-gray-800">{config.event.name}</h3>
 
                             <div className="space-y-4">
                                 <div className="flex items-start space-x-4">
-                                    <MapPin className="w-5 h-5 text-rose-500 mt-1" />
-                                    <p className="text-gray-600 flex-1">{config.event.address}</p>
+                                    <MapPin className="w-5 h-5 mt-1 text-rose-500" />
+                                    <p className="flex-1 text-gray-600">{config.event.address}</p>
                                 </div>
 
                                 <div className="flex items-center space-x-4">
@@ -131,13 +131,6 @@ export default function Location() {
                                     </motion.a>
                                 </div>
                             </div>
-                        </div>
-
-                        {/* Additional Info */}
-                        <div className="bg-rose-50/50 rounded-xl p-4 border border-rose-100">
-                            <p className="text-rose-600 text-sm">
-                                <span className="font-medium">Note:</span> Free parking is available for all guests
-                            </p>
                         </div>
                     </motion.div>
                 </div>

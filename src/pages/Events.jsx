@@ -6,30 +6,29 @@ import { Heart } from 'lucide-react'
 export default function Events() {
     return (<>
         {/* Event Section */}
-        <section id="event" className="min-h-screen relative overflow-hidden">
+        <section id="event" className="relative min-h-screen overflow-hidden" style={{ background: 'linear-gradient(to bottom, #FCE3CF, #D2E8F3)' }}>
             {/* Decorative Background Elements */}
-            <div className="absolute inset-0 bg-gradient-to-b from-white via-rose-50/30 to-white" />
-            <div className="absolute top-0 left-0 w-64 h-64 bg-rose-100/20 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
-            <div className="absolute bottom-0 right-0 w-64 h-64 bg-pink-100/20 rounded-full blur-3xl translate-x-1/2 translate-y-1/2" />
+            <div className="absolute top-0 left-0 w-64 h-64 -translate-x-1/2 -translate-y-1/2 rounded-full bg-rose-100/20 blur-3xl" />
+            <div className="absolute bottom-0 right-0 w-64 h-64 translate-x-1/2 translate-y-1/2 rounded-full bg-pink-100/20 blur-3xl" />
 
             <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 0.8 }}
-                className="relative z-10 container mx-auto px-4 py-20"
+                className="container relative z-10 px-4 py-20 mx-auto"
             >
                 {/* Section Header */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
-                    className="text-center space-y-4 mb-16"
+                    className="mb-16 space-y-4 text-center"
                 >
                     <motion.span
                         initial={{ opacity: 0, y: 10 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.2 }}
-                        className="inline-block text-rose-500 font-medium mb-2"
+                        className="inline-block mb-2 font-medium text-rose-500"
                     >
                         Catat Tanggal Penting Ini
                     </motion.span>
@@ -38,7 +37,7 @@ export default function Events() {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.3 }}
-                        className="text-4xl md:text-5xl font-serif text-gray-800 leading-tight"
+                        className="font-serif text-4xl leading-tight text-gray-800 md:text-5xl"
                     >
                         Rangkaian Acara Pernikahan
                     </motion.h2>
@@ -47,7 +46,7 @@ export default function Events() {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.4 }}
-                        className="text-gray-500 max-w-md mx-auto"
+                        className="max-w-md mx-auto text-gray-500"
                     >
                         Kami Mengundang Anda untuk Merayakan Hari Istimewa Sebagai Awal Perjalanan Cinta Kami
                     </motion.p>
