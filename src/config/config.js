@@ -14,6 +14,7 @@ const config = {
     brideName: "Fulana",
   },
 
+  //suraj
   // Event Details
   event: {
     date: "2024-12-24",
