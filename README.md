@@ -96,8 +96,6 @@ export default config;
 
 ```
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/git?s=https://github.com/mrofisr/islamic-wedding-invitation)
-
 ## License
 This project is licensed under the [Apache License 2.0](https://opensource.org/licenses/Apache-2.0). You can use, modify, and distribute it as long as you include the original copyright notice and license.
 
@@ -109,4 +107,3 @@ Contributions and issue reports are welcome. If this project helped you, give it
 - Instagram: [@mrofisr](https://instagram.com/mrofisr)
 
 May Allah guide us all.
-
